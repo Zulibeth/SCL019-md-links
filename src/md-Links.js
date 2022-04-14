@@ -1,15 +1,16 @@
 const infoRoute = require("../index");
 
 const mdLinks = (userRoute) => {
-    return new Promise( (resolve, reject) =>{
+    return new Promise( () =>{
 
         const absoluteRoute = infoRoute.routeToAbsolute(userRoute);
         const validRoute = infoRoute.validRoute(absoluteRoute);
 
-        if(validRoute === true){
-           resolve( console.log("La ruta es valida"));
+        if(!validRoute === true){
+           //(console.log("La ruta es valida"));
+           const readFile = infoRoute.searchFile(absoluteRoute);
         }else{
-            reject(console.log("La ruta no existe "));
+           (console.log("La ruta no existe "));
         }
     })
 }

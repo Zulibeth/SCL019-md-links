@@ -9,7 +9,7 @@ if(args.length === 0){
  }
  if(args.length === 1){
     // console.log(typeRoute);
-    mdLinks(args[0], { validate: false})
+    mdLinks(args[0])
     .then(console.log(args[0]))
     .catch(err => console.log(err));
    
