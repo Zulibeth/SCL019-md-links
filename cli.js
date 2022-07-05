@@ -9,10 +9,25 @@ if(args.length === 0){
      console.error("Ingrese la ruta de un archivo");
  }
  if(args.length === 1){
-    //console.log(args[0])
-    mdLinks(args[0], { validate:false })
+    mdLinks(args[0], {validate: false})
     .then(arrayLinks => infoRoute.linksTemplate(arrayLinks))
     .catch(err => console.log(err));
-    //console.log(args[0]);
    
  }
+
+const positionOne = args[1];
+
+//  if (args.length === 2 && (positionOne === "--validate" || positionOne === "-v")){
+//     mdLinks(args[0], {validate: true})
+//       .then(arrayLinks => infoRoute.getLinksStatus(arrayLinks))
+//       .catch(err => console.log(err));
+//  }
+
+ 
+ if (args.length === 2 && (positionOne === "--stats" || positionOne === "-s")){
+   mdLinks(args[0], {validate: true})
+     .then(arrayLinks => console.log(infoRoute.totalLinks(arrayLinks)))
+     .catch(err => console.log(err));
+}
+
+

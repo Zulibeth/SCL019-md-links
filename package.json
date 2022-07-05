@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Zulibeth/SCL019-md-links/issues"
   },
-  "homepage": "https://github.com/Zulibeth/SCL019-md-links#readme"
+  "homepage": "https://github.com/Zulibeth/SCL019-md-links#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
 }
